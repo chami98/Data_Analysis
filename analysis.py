@@ -14,7 +14,7 @@ with open(csv_file, 'r') as file:
         vehicle_make = row['VehicleMake'].strip()
         model = row['Model'].strip()
         model_year = row['ModelYear'].strip()
-        tec_doc_no = row['TecDocNo'].strip()
+        tec_doc_no = int(row['TecDocNo'].strip())
 
         combination = (vehicle_make, model, model_year)
         if combination in seen_combinations:
